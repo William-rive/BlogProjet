@@ -16,3 +16,7 @@
     <div>
         <p><?php echo $params["article"]->getContent(); ?></p>
     </div>
+
+    <div>
+        <img src="<?php echo $params["article"]->getFile_path_image(); ?>" alt="">
+    </div>

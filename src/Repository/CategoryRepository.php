@@ -22,4 +22,11 @@ class CategoryRepository extends AbstractRepository
         $query = "SELECT * FROM category;";
         return $this->executeQuery($query, "Category");
     }
+
+    public function find(int $id)
+    {
+        $query = "SELECT * FROM category WHERE id = :id";
+        $params = [":id" => $id];
+        return $this->executeQuery($query, "Category", $params);
+    }
 }

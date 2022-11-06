@@ -30,6 +30,14 @@ const ROUTING = [
         "controller" => "ArticleController",
         "action" => "add"
     ],
+    "article_deleted" => [
+        "controller" => "ArticleController",
+        "action" => "deleted"
+    ],
+    "article_update" => [
+        "controller" => "ArticleController",
+        "action" => "update"
+    ],
     "user_add" => [
         "controller" => "UserController",
         "action" => "add"

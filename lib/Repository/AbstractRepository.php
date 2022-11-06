@@ -29,7 +29,6 @@ abstract class AbstractRepository
             if ($statement->rowCount() > 1 ) $result = $statement->fetchAll();
 
         }
-
         
         $conn = null;
         return $result;

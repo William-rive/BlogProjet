@@ -50,7 +50,7 @@ class UserController extends AbstractController
     public function connect()
     {   
         $error = null;
-        $message = null;
+        $message = "";
         if (
             $_POST
             && isset($_POST["username"], $_POST["password"])
@@ -61,9 +61,10 @@ class UserController extends AbstractController
                 $message = "Erreur de connexion";
                 $userRepository = new UserRepository();
                 $user = $userRepository->findByUsername($username);
-                if (password_verify($password, $user->getPassword()))
+                if (!empty($user) && password_verify($password, $user->getPassword()))
                 {
                     $_SESSION["user_is_connected"] = true;
+                    $_SESSION['user_id'] = $user->getId();
                     $error = true;
                     $message = "Utilisateur connecté.";
                     header("Location: /?page=home");
@@ -72,7 +73,7 @@ class UserController extends AbstractController
         }
         return $this->renderView("/template/user/user_connexion.php", [
             "error" => $error,
-            "message" => $message
+            "message" => $message,
         ]);
     }
 
