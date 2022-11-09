@@ -1,3 +1,3 @@
 ﻿# BlogProjet
 
-Still in progress
+Projet terminer
