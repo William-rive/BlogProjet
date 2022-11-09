@@ -5,19 +5,19 @@
         <form method="post" class="card">
             <ul>
                 <li>
-                    <label for="name">Votre nom</label>
+                    <label for="name">Votre nom :</label>
                     <input type="text" id="lastname" name="lastname" />
                 </li>
                 <li>
-                    <label for="name">Votre prénom</label>
+                    <label for="name">Votre prénom :</label>
                     <input type="text" id="firstname" name="firstname" />
                 </li>
                 <li>
-                    <label for="mail">Votre e-mail</label>
+                    <label for="mail">Votre e-mail :</label>
                     <input type="email" id="mail" name="email" />
                 </li>
                 <li>
-                    <label for="msg">Votre message</label>
+                    <label for="msg">Votre message :</label>
                     <textarea id="msg" name="message"></textarea>
                 </li>
                 <li>

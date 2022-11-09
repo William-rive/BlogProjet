@@ -1,7 +1,14 @@
 :root {
-    --background: rgb(97, 189, 187);
-    --text-color: #76787a;
-    --button-color: #00a1ba;
+    --background-blue: rgb(97, 189, 187);
+    --text-color: rgb(118, 120, 122);
+    --button-color: rgb(0, 161, 186);
+    --text-color-black: black;
+    --background-white: white;
+    --background-gray: rgba(180, 181, 182, 0.253);
+    --create-button: rgb(57, 72, 85);
+    --delete-button: rgb(233, 1, 1);
+    --modify-button: rgb(255, 193, 7);
+    --hover-button: rgb(85, 85, 85);
 }
 
 /*******************************************************************************************************************************************************************************/
@@ -24,7 +31,7 @@
 }
 
 .navbar .logo {
-    color: black;
+    color: var(--text-color-black);
     font-size: 2em;
     font-weight: bold;
     margin-right: 7em;
@@ -49,20 +56,143 @@
     top: 45px;
 }
 
+/*******************************************************************************************************************************************************************************/
+/*************************************************************************************HERO_SECTION******************************************************************************/
+/*******************************************************************************************************************************************************************************/
+
+.hero_section {
+    background-image: url(../img/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.hero_section .hero_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_section .hero_container .hero_card {
+    display: flex;
+    width: 90%;
+    margin-top: 5em;
+}
+
+.hero_card .hero_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    margin-right: 5em;
+}
+
+.hero_card .hero_text h2 {
+    padding: 36px;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.hero_card .hero_text p {
+    padding: 0 36px;
+    margin-bottom: 2em;
+    line-height: 1.8em;
+}
+
+.hero_card .hero_text a {
+    background-color: var(--button-color);
+    color: var(--background-white);
+    margin-top: 2em;
+    margin-left: 4em;
+    padding: 12px;
+    width: 50%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_card div img {
+    width: 100%;
+    height: auto;
+}
+
+/*2eme section*/
+
+.home_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.home_card {
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    display: flex;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+    width: 90%;
+}
+
+.home_card .home_text {
+    padding: 36px;
+    margin-right: 4em;
+    line-height: 1.8em;
+}
+
+.home_card .home_text h2 {
+    margin-bottom: 1em;
+}
+
+.home_card .home_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_card .home_image img {
+    width: 50%;
+    height: auto;
+}
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--delete-button);
+    color: var(--background-white);
+    cursor: pointer;
+    padding: 18px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+  
+  #topBtn:hover {
+    background-color: var(--hover-button);
+  }
 
 /*******************************************************************************************************************************************************************************/
 /*************************************************************************************CONTACT***********************************************************************************/
 /*******************************************************************************************************************************************************************************/
 
 .container {
-    background-color: var(--background);
+    background-image: linear-gradient(180deg,rgba(5, 0, 0, 0.171) 0%,rgba(5, 0, 0, 0.13)100%), url(../img/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
 }
 
 .form_container {
-    background: white;
+    background: var(--background-white);
     margin: 7em auto auto auto;
     padding: 36px;
     display: flex;
@@ -72,6 +202,7 @@
 
 .form_container h2 {
     margin-bottom: 36px;
+    font-size: 2em;
 }
 
 .card {
@@ -108,10 +239,479 @@
     justify-content: center;
     border: none;
     background-color: var(--button-color);
-    color: white;
+    color: var(--background-white);
     width: 8%;
     padding: 12px;
     cursor: pointer;
+}
+
+/*******************************************************************************************************************************************************************************/
+/*************************************************************************************CONNEXION*********************************************************************************/
+/*******************************************************************************************************************************************************************************/
+
+.label_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+
+.card div input[type=text],input[type=password] {
+    width: 50%;
+    height: 2em;
+    outline: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.144);
+}
+
+.card input[type=submit] {
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-color);
+    padding: 12px;
+    color: var(--background-white);
+}
+
+.card div label {
+    width: 16%;
+}
+
+
+.add_user {
+    margin-top: 1em;
+    color: var(--text-color);
+    font-weight: bold;
+    width: 10%;
+}
+
+.add_user:hover {
+    text-decoration: underline;
+}
+
+/*******************************************************************************************************************************************************************************/
+/*************************************************************************************ARTICLE_LIST******************************************************************************/
+/*******************************************************************************************************************************************************************************/
+
+.background {
+    background-image: linear-gradient(180deg,rgba(5, 0, 0, 0.171) 0%,rgba(5, 0, 0, 0.13)100%), url(../img/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.background h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+    font-size: 2em;
+}
+
+.background .create {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 3em;
+}
+
+.background .create a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-white);
+    background-color: var(--create-button);
+    padding: 10px;
+    width: 10%;
+}
+
+.table_container {
+    background: var(--background-white);
+    margin: 3em auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+table {
+    background-color: var(--background-gray);
+    width: 100%;
+}
+
+
+/*Thead*/
+
+table thead tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--background-white);
+}
+
+table thead tr .title {
+    width: 50%;
+}
+
+table thead tr .date {
+    width: 10%;
+}
+
+table thead tr .plus {
+    width: 10%;
+}
+
+/*Tbody*/
+
+table tbody tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0px 24px 24px;
+}
+
+table tbody tr:nth-child(even){
+    background-color: var(--background-white);
+}
+
+table tbody tr .title {
+    width: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+table tbody tr .date {
+    width: 10%;
+}
+
+table tbody tr .plus {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody tr td a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    background-color: var(--button-color);
+    padding: 8px;
+    color: var(--background-white);
+    width: 60%;
+}
+
+tbody tr td .modify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    background-color: var(--modify-button);
+    padding: 8px;
+    color: var(--background-white);
+    width: 60%;
+}
+
+tbody tr td button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+    background-color: var(--delete-button);
+    padding: 10px;
+    color: var(--background-white);
+    border: none;
+    cursor: pointer;
+    width: 60%;
+}
+
+/*******************************************************************************************************************************************************************************/
+/*************************************************************************************ARTICLE_ADD*******************************************************************************/
+/*******************************************************************************************************************************************************************************/
+
+
+
+.add_form_container {
+    background: var(--background-white);
+    margin: 7em auto auto auto;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.add_form_container h2 {
+    padding-bottom: 36px;
+    font-size: 2em;
+}
+
+/*Title*/
+
+.card .title_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card .title_container label {
+    width: 8%;
+}
+
+.card .title_container input[type=text] {
+    width: 50%;
+}
+
+/*Select*/
+
+.card .category_select {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card .category_select label {
+    width: 8%;
+}
+
+.card .category_select select {
+    appearance: none;
+    background-color: transparent;
+    border: 0.5px solid rgba(0, 0, 0, 0.144);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 70%;
+    cursor: inherit;
+    line-height: inherit;
+}
+
+.card select option {
+    padding: 0.5em;
+    border: 0.5px solid rgba(0, 0, 0, 0.050);
+}
+
+/*File*/
+
+.card .file_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.card .file_container label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--background-white);
+    background-color: var(--delete-button);
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 2em;
+}
+
+.card .file_container label i {
+    margin-right: 5px;
+}
+
+
+
+.card .file_container .inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+/*Textarea*/
+
+.card div .textarea_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.card div .textarea_container label {
+    width: 8%;
+}
+
+.card div .textarea_container textarea {
+    width: 70%;
+    height: 10em;
+    outline: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.144);
+}
+
+.card div input[type=submit] {
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-color);
+    padding: 12px; 
+    color: var(--background-white);
+}
+
+.add_form_container div .image_container {
+    width: 50%;
+    height: 50%;
+}
+
+.add_form_container div .image_container img {
+    width: 100%;
+    height: auto;
+}
+
+/*******************************************************************************************************************************************************************************/
+/*************************************************************************************ARTICLE_SHOW*******************************************************************************/
+/*******************************************************************************************************************************************************************************/
+
+.article_container {
+    background: var(--background-white);
+    margin: 5em auto auto auto;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.article_container h2 {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article_container .user_container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1em 0;
+}
+
+.article_container .category {
+    margin-bottom: 2em;
+}
+
+.article_container .category span{
+    padding: 12px;
+    background: var(--create-button);
+    border-radius: 10px;
+    color: var(--background-white);
+}
+
+.article_container .content_container {
+    margin-bottom: 2em;
+}
+
+.article_container .image_container {
+    height: 50%;
+    width: 50%;
+}
+
+.article_container .image_container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*******************************************************************************************************************************************************************************/
+/*************************************************************************************MODAL*************************************************************************************/
+/*******************************************************************************************************************************************************************************/
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--background-white);
+    border-radius: 10px;
+    box-shadow: rgb(100 100 111 / 30%) 0px 7px 29px 0px;
+}
+
+.modal_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: var(--create-button);
+    color: var(--background-white);
+    padding: 10px;
+}
+
+.modal_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.modal_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal_footer .btn_modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0px 0px 0px 10px;
+    border: 0.5px solid rgba(0, 0, 0, 0.144);
+    padding: 10px;
+    width: 50%;
+    background-color: var(--button-color);
+    color: var(--background-white);
+}
+
+.modal_footer .btn_modal:hover {
+    background-color: var(--hover-button);
+}
+
+.modal_footer form {
+    width: 50%;
+}
+
+.modal_footer form input[type=submit] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0px 0px 10px 0px;
+    border: 0.5px solid rgba(0, 0, 0, 0.144);
+    padding: 10px;
+    width: 100%;
+    background-color: var(--delete-button);
+    color: var(--background-white);
+}
+
+.modal_footer form input[type=submit]:hover {
+    background-color: var(--hover-button);
 }
 
 
@@ -168,7 +768,7 @@
     }
 
     .navbar .nav_links ul li a {
-        color: black;
+        color: var(--text-color-black);
         font-weight: bold;
         font-size: 1.5em;
     }
@@ -178,4 +778,19 @@
         display: block;
         width: 35px;
     }
+
+    .hero_card .hero_text {
+        width: 100%;
+    }
+
+    .hero_card div img {
+        display: none;
+    }
+
+    .home_card .home_text {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    
 }

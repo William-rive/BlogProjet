@@ -157,7 +157,7 @@ class ArticleController extends AbstractController
                 {
                     $this->articleRepository->insertArticleCategory($article, $category);
                 }
-
+                header("Location: /?page=article");
             }
             $this->renderView("/template/article/article_update.php",
                 [
